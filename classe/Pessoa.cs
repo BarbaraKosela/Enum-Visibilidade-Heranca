@@ -17,14 +17,14 @@ namespace classe
             Sobrenome = sobrenome;
             sexoInformado = sexo;
 
-            //Validar(Nome, Sobrenome);
+            //Validar();
         }
         public void MudarNome(string nome, string sobrenome)
         {
             Nome = nome;
             Sobrenome = sobrenome;
 
-            Validar(nome, sobrenome);
+            //Validar();
         }
         public void Exibir()
         {
