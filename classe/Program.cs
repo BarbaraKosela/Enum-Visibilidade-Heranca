@@ -9,10 +9,16 @@ namespace classe
             Console.WriteLine("inicio");
 
             Console.WriteLine("Digite seu nome completo: ");
-            string nomeCompleto = Console.ReadLine();
+            string nomeCompleto = Console.ReadLine().Trim();
 
+            while(!nomeCompleto.Contains(" "))
+            {
+                Console.WriteLine("Digite nome completo novamente!");
+                nomeCompleto = Console.ReadLine();
+            }
             Mulher mulher = new Mulher(nomeCompleto);
             mulher.Exibir();
+
             /*
             Console.WriteLine("Digite nome novamente para mudar: ");
             nome = Console.ReadLine();

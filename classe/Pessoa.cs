@@ -28,15 +28,17 @@ namespace classe
         }
         public void Exibir()
         {
-            Console.WriteLine($"\nSeu resultado é: " + Nome.Trim() + " " + Sobrenome.Trim() + " Com o sexo: " + sexoInformado);
+            Console.WriteLine($"\nSeu resultado é: " + Nome.Trim() + " " + Sobrenome.Trim() + " com o sexo: " + sexoInformado);
         }
         #region Regra de negocio
-        protected void Validar(string nomeCompleto)
+        protected bool Validar(string nomeCompleto)
         {
             if (string.IsNullOrEmpty(nomeCompleto))
-                throw new Exception("Nome completo deve ser preenchido");
-            if (!nomeCompleto.Contains(" "))
-                throw new Exception("Nome deve ser completo");
+            {
+                Console.WriteLine("Nome completo deve ser preenchido");
+                return false;
+            }
+            return true;
         }
         #endregion
     }
