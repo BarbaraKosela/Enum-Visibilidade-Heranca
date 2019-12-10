@@ -19,14 +19,14 @@ namespace classe
 
             //Validar();
         }
-        public void MudarNome(string nome, string sobrenome)
+        public virtual void MudarNome(string nome, string sobrenome)
         {
             Nome = nome;
             Sobrenome = sobrenome;
 
             //Validar();
         }
-        public void Exibir()
+        public virtual void Exibir()
         {
             Console.WriteLine($"\nSeu resultado é: " + Nome.Trim() + " " + Sobrenome.Trim() + " com o sexo: " + sexoInformado);
         }

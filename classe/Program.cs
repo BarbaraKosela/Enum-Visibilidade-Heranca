@@ -17,8 +17,8 @@ namespace classe
                 nomeCompleto = Console.ReadLine();
             }
             Mulher mulher = new Mulher(nomeCompleto);
-            mulher.Exibir();
-
+            mulher.MudarNome(nomeCompleto);
+            mulher.Exibir(nomeCompleto);
             /*
             Console.WriteLine("Digite nome novamente para mudar: ");
             nome = Console.ReadLine();
@@ -30,7 +30,6 @@ namespace classe
 
             pessoa.MudarNome(nome, sobrenome);
             pessoa.ExibirNome();*/
-
             Console.WriteLine("fim");
             Console.ReadLine();
 
